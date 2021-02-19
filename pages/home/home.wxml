@@ -1,2 +1,9 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.小程序的数据绑定 -->
+<view>Hello Frank {{name}}</view>
+
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleBtn">+</button>
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="getInfo">授权信息</button>
+
+<open-data type="userAvatarUrl"></open-data>
