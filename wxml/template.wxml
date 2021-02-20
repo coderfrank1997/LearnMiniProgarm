@@ -1,0 +1,4 @@
+<template name="contentItem">
+  <button>变量：{{btnText}}</button>
+  <view>我是模板：{{content}}</view>
+</template>

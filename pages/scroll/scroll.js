@@ -1,31 +1,33 @@
-// pages/home/home.js
+// pages/scroll/scroll.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgPath: ''
+    nowTime: new Date().toLocaleString(),
+    isActive: false,
+    score: 50,
   },
   change() {
-    wx.chooseImage({
-      success: res => {
-        console.log(this);
-        // 1.保存图片路径
-        const path = res.tempFilePaths[0];
-        // 2.修改路径
-        this.setData({
-          imgPath: path,
-        })
-      }
-    })
+    this.setData({
+      isActive : !this.data.isActive
+    });
   },
-
+  add() {
+    this.setData({
+      score: this.data.score + 5,
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // setInterval(() => {
+    //   this.setData({
+    //     nowTime: new Date().toLocaleString(),
+    //   }, 1000)
+    // })
   },
 
   /**

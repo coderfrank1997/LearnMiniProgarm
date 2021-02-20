@@ -1,24 +1,11 @@
-// pages/home/home.js
+// pages/input/input.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgPath: ''
-  },
-  change() {
-    wx.chooseImage({
-      success: res => {
-        console.log(this);
-        // 1.保存图片路径
-        const path = res.tempFilePaths[0];
-        // 2.修改路径
-        this.setData({
-          imgPath: path,
-        })
-      }
-    })
+
   },
 
   /**

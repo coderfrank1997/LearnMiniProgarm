@@ -1,0 +1,23 @@
+<!--pages/scroll/scroll.wxml-->
+<scroll-view class="content1" scroll-x>
+  <view wx:for="{{10}}" class="content-item" wx:key="item">{{item}}</view>
+</scroll-view>
+
+<view>{{nowTime}}</view>
+
+<view class="box {{isActive ? 'active' : ''}}" bindtap="change">WDNMD</view>
+<!-- <map name="aaa" class="map"></map> -->
+<button bindtap="add">递增5分</button>
+<view>{{score}}</view>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- 模板导入 -->
+<import src="/wxml/template.wxml"></import>
+
+<template is="contentItem" data="{{btnText: '按钮', content: '我是变量值'}}"></template>
+
+<include src="/wxml/ddd.wxml"></include>
+<include src="/wxml/abc.wxml"></include>

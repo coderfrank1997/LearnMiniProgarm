@@ -1,2 +1,20 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.image的基本使用 -->
+<!-- 
+  重点：
+  1.image组件可以写成单标签，也可以写成双标签
+  2.image组件默认有自己的大小：320x240
+  3.image组件是一个行内块级元素（inline-block）
+ -->
+<!-- <image></image> -->
+
+<!-- 2.src：本地路径（相对路径/绝对路径）/远程地址 -->
+<image src="../../assets/test/1.jpg" mode="aspectFit"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 选中相册中的图片 -->
+<button bindtap="change">选中图片</button>
+<image src="{{imgPath}}"></image>
+
+<!-- 长按识别小程序码 -->
+<image show-menu-by-longpress src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>

@@ -1,0 +1,4 @@
+<view>
+  <view>分类/类目</view>
+  <include src="./ccc.wxml"></include>
+</view>

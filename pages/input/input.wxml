@@ -1,0 +1,15 @@
+<!--pages/input/input.wxml-->
+<!-- 1.input的基本使用 -->
+<input/>
+
+<!-- 2.value: input中的默认值 -->
+<input value="默认值"/>
+
+<!-- 3.type: 决定键盘类型 -->
+<input type="number"/>
+
+<!-- 4.password：密码/暗文 -->
+<input password/>
+
+<!-- 5.placeholder：占位文字 -->
+<input placeholder="请输入显示内容"/>
