@@ -1,2 +1,40 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 基本使用 -->
+<!-- \n 文字换行 -->
+<text>Hello World\n</text>
+
+<!-- 2.selecttable：true -->
+<!-- 默认情况下text中文本长按是不能选中 -->
+<text selectable="{{true}}">可选中内容</text>
+
+<!-- 3.space: 决定文本空格的大小 -->
+<!-- ensp: 半个中文字符大小 -->
+<!-- emsp: 一个中文字符大小 -->
+<text>Hello World\n</text>
+<text space="nbsp">Hello World\n</text>
+<text space="ensp">Hello World\n</text>
+<text space="emsp">Hello World\n</text>
+
+<!-- 1.button的基本使用 -->
+<button size="mini">按钮</button>
+
+<!-- 2.type属性 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<!-- 3.plain: 镂空效果 -->
+<button size="mini" plain>按钮</button>
+
+<!-- 4.disable: 禁用 -->
+<button size="mini" disabled>按钮</button>
+
+<!-- 5.loading -->
+<!-- <button size="mini" loading>按钮</button> -->
+
+<!-- 6.hover-class -->
+<button hover-class="pressed">按钮</button>
+
+<!-- 7.试图容器 -->
+<view class="box1" hover-class="viewClick" hover-stay-time="0" hover-start-time="0">box1</view>
+

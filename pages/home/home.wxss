@@ -1,1 +1,15 @@
 /* pages/home/home.wxss */
+.pressed {
+  background: red;
+  color: #ffffff;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: #1aad19;
+}
+.viewClick {
+  background: #e64340;
+  font-size: 20px;
+}
