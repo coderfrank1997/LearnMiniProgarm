@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    num: 3.1415926,
+    time: new Date().getTime() / 1000,
+  },
+  numToFiexd() {
+    this.setData({
+      num: this.data.num.toFixed(2),
+    });
   },
 
   /**

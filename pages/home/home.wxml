@@ -1,2 +1,28 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- <text>pages/home/home.wxml</text>
+<button bindtap="numToFiexd">小数点</button>
+<view>{{num}}</view> -->
+
+<!-- <wxs module="info">
+  var name = 'hahah';
+  var sum = function(num1, num2) {
+    return num1 + num2;
+  }
+  module.exports = {
+    name: name,
+    sum: sum
+  }
+</wxs> -->
+
+<!-- 定义在单独的wxs文件中，再使用<wxs>标签进行导入 -->
+<wxs src="../../wxs/info.wxs" module="info"></wxs>
+
+<view>{{info.name}}</view>
+<view>{{info.sum(10, 20)}}</view>
+
+<!-- wxs的应用 -->
+<wxs src="/wxs/format.wxs" module="format"></wxs>
+
+<view>{{format.priceFormat(3.1415926, 4)}}</view>
+<view>{{time}}</view>
+<view>{{format.dateFormat(time, 'yyyy/MM/dd')}}</view>
