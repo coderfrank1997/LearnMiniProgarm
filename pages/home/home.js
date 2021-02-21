@@ -5,7 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    titles: ['衣服','裤子','鞋子'],
+  },
+  changeClick1(event) {
+    console.log('changeClick1');
+  },
+  changeClick2(event) {
+    console.log('changeClick2');
+  },
+  changeClick3() {
+    console.log('捕获阶段');
+  },
+  handleTtem(event) {
+    const datas = event.currentTarget.dataset;
+    const item = datas.item;
+    console.log(item);
   },
 
   /**

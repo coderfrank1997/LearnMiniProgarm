@@ -1,2 +1,17 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<text class="title">pages/home/home.wxml</text>
+<view id="out" class="outer" capture-bind:tap="changeClick3" bindtap="changeClick1">
+我是外层
+  <view id="in" class="inner" catchtap="changeClick2">
+    我是内层
+  </view>
+</view>
+
+<view class="contentner">
+  <block wx:for="{{titles}}" wx:key="item">
+    <view class="item" bindtap="handleTtem" data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+
+<my-cpn></my-cpn>
+<my-cpn></my-cpn>

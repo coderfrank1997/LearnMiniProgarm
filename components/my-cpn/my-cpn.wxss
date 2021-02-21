@@ -1,0 +1,6 @@
+/* components/my-cpn/my-cpn.wxss */
+.box {
+  width: 400rpx;
+  height: 400rpx;
+  background: blue;
+}
