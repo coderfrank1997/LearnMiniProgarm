@@ -6,6 +6,31 @@ Page({
    */
   data: {
     titles: ['衣服','裤子','鞋子'],
+    counter: 0,
+    flag: true
+  },
+  changes() {
+    this.setData({
+      flag: !this.data.flag,
+    });
+  },
+  sub() {
+    const com_sel = this.selectComponent('#my-event');
+    // 通过setData修改组件的数据（不合理）
+    // com_sel.setData({
+    //   num: com_sel.data.num + 5,
+    // });
+
+    // 通过方法对数据进行修改
+    com_sel.subb(10);
+  },
+  iiClick(e) {
+    // console.log(e);
+  },
+  incer(event) {
+    this.setData({
+      counter: this.data.counter + 1,
+    })
   },
   changeClick1(event) {
     console.log('changeClick1');

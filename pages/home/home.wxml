@@ -1,17 +1,36 @@
 <!--pages/home/home.wxml-->
-<text class="title">pages/home/home.wxml</text>
+<!-- <text class="title">pages/home/home.wxml</text>
 <view id="out" class="outer" capture-bind:tap="changeClick3" bindtap="changeClick1">
 我是外层
   <view id="in" class="inner" catchtap="changeClick2">
     我是内层
   </view>
-</view>
+</view> -->
 
 <view class="contentner">
-  <block wx:for="{{titles}}" wx:key="item">
+  <block wx:for="{{titles}}" wx:key="index">
     <view class="item" bindtap="handleTtem" data-item="{{item}}">{{item}}</view>
   </block>
 </view>
 
+<!-- 组件之间传递数据/样式 -->
+<my-cpn title="哈哈哈" title-class="hhh"></my-cpn>
 <my-cpn></my-cpn>
-<my-cpn></my-cpn>
+
+<!-- 组件内部发出事件 -->
+<view>当前计数：{{counter}}</view>
+<my-event bind:incr="incer" id="my-event"></my-event>
+
+<!-- 练习 -->
+<w-tab-control titles="{{['流行', '新款', '精选']}}" bind:iconClick="iiClick"></w-tab-control>
+
+<!-- 父组件修改子组件数据 -->
+<button bindtap="sub">修改子组件数据</button>
+
+<!-- 插槽的使用 -->
+<button bind:tap="changes">切换显隐</button>
+<block wx:if="{{flag}}">
+  <w-my-slot>
+    <view slot="left" class="sss">哈哈哈</view>
+  </w-my-slot>
+</block>

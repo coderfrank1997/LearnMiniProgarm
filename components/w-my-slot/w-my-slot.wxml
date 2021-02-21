@@ -1,0 +1,7 @@
+<!--components/w-my-slot/w-my-slot.wxml-->
+<!-- <view> -->
+  <view>我是开头</view>
+  <slot name="left"></slot>
+  <slot name="right"></slot>
+  <view>我是结尾</view>
+<!-- </view> -->

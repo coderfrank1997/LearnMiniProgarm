@@ -1,6 +1,6 @@
 /* components/my-cpn/my-cpn.wxss */
 .box {
   width: 400rpx;
-  height: 400rpx;
-  background: blue;
+  height: 200rpx;
+  background: rgb(132, 132, 255);
 }
