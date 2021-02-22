@@ -1,66 +1,60 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  handClick1() {
+    wx.showToast({
+      title: 'loading...',
+      duration: 3000,
+      icon: 'loading',
+      success() {
+        console.log('弹出成功');
+      },
+      fail() {
+        console.log('弹出失败');
+      },
+      complete() {
+        console.log('完成函数的调用');
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handClick2() {
+    wx.showModal({
+      title: '我是标题',
+      content: '哈哈哈',
+      cancelText: '回退',
+      cancelColor: '#fa805c',
+      confirmColor: '#fa805c',
+      // showCancel: false,
+      success(res) {
+        console.log(res);
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handClick3() {
+    wx.showActionSheet({
+      itemList: ['相册', '拍照'],
+      itemColor: 'red',
+      success: (result) => {
+        console.log(result);
+      },
+      fail: (res) => {},
+      complete: (res) => {},
+    })
   },
+  handClick4() {
+    wx.showLoading({
+      title: 'loading...',
+    });
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+    setTimeout(() => {
+      wx.hideLoading({
+        success: (res) => {},
+      })
+    }, 3000);
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage(options) {
+    return {
+      title: '你好啊！frank',
+      
+    }
   }
 })

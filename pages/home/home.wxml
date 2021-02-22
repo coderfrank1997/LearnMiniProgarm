@@ -1,2 +1,9 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<button bindtap="handClick1">Toast提示框</button>
+
+<button bindtap="handClick2">modal提示框</button>
+
+<button bindtap="handClick3">action按钮</button>
+
+<button bindtap="handClick4">loading按钮</button>
