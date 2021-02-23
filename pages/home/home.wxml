@@ -1,2 +1,11 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+
+<!-- 页面跳转 -->
+<navigator url="/pages/about/about">跳到关于页面</navigator>
+
+<!-- open-type属性 -->
+<navigator url="/pages/about/about" open-type="redirect">跳到关于页面redirect</navigator>
+
+<!-- switchTab -->
+<navigator url="/pages/about/about" open-type="switchTab">跳到关于页面</navigator>
